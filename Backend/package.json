@@ -1,21 +1,22 @@
 {
-  "name": "backend",
+  "name": "backend1",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.ts"
   },
-  "author": "Yondo Leka",
+  "author": "Yondo leka",
   "license": "ISC",
   "description": "",
-  "devDependencies": {
-    "dotenv": "^16.4.5",
+  "dependencies": {
+    "@prisma/client": "^5.20.0",
     "express": "^4.21.0",
+    "request-handler": "^3.4.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
     "nodemon": "^3.1.7",
     "prisma": "^5.20.0"
-  },
-  "dependencies": {
-    "@types/express": "^5.0.0",
-    "typescript": "^5.6.2"
   }
 }

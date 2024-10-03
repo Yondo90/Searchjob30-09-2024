@@ -12,3 +12,23 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model TaskJobs{
+  idtask String @id @default(uuid())
+  title String
+  taskName String
+  logo String
+  country String
+  //An taskjobs can have one or many infoTask(1,n)
+  infotask InfoTask[]
+}
+
+model InfoTask {
+  idInfo String @id @default(uuid())
+  profile String
+  requirements String
+  autres String
+  //an infoTask can have one taskjobs(1)
+  idtask String
+  taskjobs TaskJobs @relation(fields: [idtask], references: [idtask])
+}
