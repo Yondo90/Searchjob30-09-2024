@@ -15,7 +15,7 @@ datasource db {
 
 model TaskJobs{
   idtask String @id @default(uuid())
-  title String
+  title String @unique
   taskName String
   logo String
   country String
